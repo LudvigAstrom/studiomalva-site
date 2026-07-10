@@ -1,0 +1,157 @@
+:root {
+  --bg: #FBFAF9;
+  --ink: #26232B;
+  --ink-soft: #5C5762;
+  --malva: #8E6C88;
+  --malva-deep: #6E4F69;
+  --line: #E6E2E0;
+  --max: 42rem;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+header.site {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+header.site a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.wordmark {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 1.5rem 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 650;
+  margin: 2.5rem 0 0.75rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin: 1.75rem 0 0.5rem;
+}
+
+p, li { color: var(--ink); }
+
+.meta {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin: 0 0 2rem;
+}
+
+a { color: var(--malva-deep); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--malva); }
+a:focus-visible { outline: 2px solid var(--malva); outline-offset: 2px; border-radius: 2px; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 2.5rem 0;
+}
+
+ul { padding-left: 1.25rem; }
+li { margin: 0.35rem 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 1.25rem 0;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5rem 0.75rem 0.5rem 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+th { font-weight: 650; color: var(--ink-soft); font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; }
+
+strong { font-weight: 650; }
+
+footer.site {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+}
+
+footer.site nav { margin-top: 0.35rem; }
+footer.site a { color: var(--ink-soft); }
+footer.site a:hover { color: var(--malva-deep); }
+
+/* Startsidan */
+.hero { padding-top: 3.5rem; }
+.hero .flower { width: 44px; height: 44px; margin-bottom: 1.25rem; }
+.hero h1 { font-size: 2.4rem; margin: 0 0 0.75rem; }
+.hero p.lead { font-size: 1.15rem; color: var(--ink-soft); max-width: 34rem; margin: 0; }
+
+.card {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+.card h2 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+.card p { margin: 0 0 0.75rem; color: var(--ink-soft); }
+.card nav { font-size: 0.95rem; }
+.card nav a { margin-right: 1.25rem; }
+
+.contact { margin-top: 2.5rem; font-size: 0.95rem; color: var(--ink-soft); }
+
+@media (max-width: 480px) {
+  body { font-size: 1rem; }
+  .hero h1 { font-size: 2rem; }
+  table { font-size: 0.8rem; }
+  th, td { padding-right: 0.5rem; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero .flower { transition: transform 0.4s ease; }
+  .hero .flower:hover { transform: rotate(36deg); }
+}
