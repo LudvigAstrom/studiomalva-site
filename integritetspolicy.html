@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integritetspolicy · Garaget</title>
+<meta name="description" content="Integritetspolicy för Garaget, en iOS-app för bilservice och underhåll.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <a href="index.html">
+    <svg width="20" height="20" viewBox="0 0 100 100" aria-hidden="true">
+      <g fill="#8E6C88">
+        <ellipse cx="50" cy="26" rx="13" ry="20"/>
+        <ellipse cx="50" cy="26" rx="13" ry="20" transform="rotate(72 50 50)"/>
+        <ellipse cx="50" cy="26" rx="13" ry="20" transform="rotate(144 50 50)"/>
+        <ellipse cx="50" cy="26" rx="13" ry="20" transform="rotate(216 50 50)"/>
+        <ellipse cx="50" cy="26" rx="13" ry="20" transform="rotate(288 50 50)"/>
+      </g>
+      <circle cx="50" cy="50" r="9" fill="#FBFAF9"/>
+    </svg>
+    <span class="wordmark">Studio Malva</span>
+  </a>
+</header>
+<main>
+  <h1>Integritetspolicy för Garaget</h1>
+  <p class="meta">Version 1.0 · Maj 2026<br>Senast uppdaterad: 7 juli 2026</p>
+
+  <h2>I korthet</h2>
+  <p>Garaget är en iOS-app för bilägare som vill ha koll på service och underhåll. Den här policyn beskriver vilken data som samlas in, varför, och vad du kan göra med den.</p>
+  <p>Det viktiga:</p>
+  <ul>
+    <li>Dina fordon, serviceloggar och annan app-data lagras i ditt eget iCloud-konto. Garaget kan inte läsa den i normal drift.</li>
+    <li>En grundläggande användningsstatistik samlas in för att förbättra appen. Den är pseudonym, vilket betyder att den inte är direkt kopplad till dig.</li>
+    <li>Om du ger samtycke samlas mer detaljerad användningsdata in, kopplad till ditt Apple-ID via en separat databastabell. Du kan återkalla samtycket när som helst i appens inställningar.</li>
+    <li>Du kan begära ut din data, få den raderad, eller radera ditt konto helt. Använd "Hantera dina uppgifter" i Inställningar &gt; Integritet, eller skriv till <a href="mailto:hej@studiomalva.se">hej@studiomalva.se</a>.</li>
+  </ul>
+
+  <h3>Översikt</h3>
+  <table>
+    <thead>
+      <tr><th>Data</th><th>Syfte</th><th>Rättslig grund</th><th>Lagring</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>App-data (iCloud)</td><td>Funktion: lagra och synka fordon, loggar, kontroller</td><td>Avtal (art. 6.1.b)</td><td>Under kontots livstid</td></tr>
+      <tr><td>Grundläggande statistik (Supabase)</td><td>Förstå hur appen används, förbättra funktioner och stabilitet</td><td>Berättigat intresse (art. 6.1.f)</td><td>Så länge datan behövs för analys</td></tr>
+      <tr><td>Detaljerad användningsdata (Supabase)</td><td>Djupare insikt i flöden, fritext, intervalländringar</td><td>Samtycke (art. 6.1.a)</td><td>Under aktiv samtyckesperiod</td></tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2>Personuppgiftsansvarig</h2>
+  <p>Ludvig Åström, ansvarig för Garaget.<br>
+  Kontakt: <a href="mailto:hej@studiomalva.se">hej@studiomalva.se</a></p>
+  <p>För personlig kontaktväg eller postadress, mejla ovan.</p>
+
+  <h2>Tillsynsmyndighet</h2>
+  <p>Integritetsskyddsmyndigheten (IMY) övervakar att personuppgifter behandlas korrekt i Sverige. Du har rätt att lämna klagomål till IMY om du anser att Garagets behandling av dina personuppgifter strider mot GDPR.</p>
+  <p>imy.se · 08-657 61 00</p>
+
+  <hr>
+
+  <h2>Vilken data samlas in, och var lagras den</h2>
+  <p>Garaget hanterar data i tre lager med olika status och syfte.</p>
+
+  <h3>1. Din app-data (iCloud)</h3>
+  <p>Dina fordon, servicepunkter, loggposter, periodiska kontroller, besiktningar, mätarställningar och anmärkningar lagras i ditt iCloud-konto via Apples CloudKit-tjänst. Datan synkar mellan dina egna Apple-enheter.</p>
+  <p>Garaget är utformat så att den här datan ligger i din privata iCloud-container och inte är tillgänglig för Garaget i normal drift. Apple hanterar lagring, kryptering och synkronisering inom ramen för sin iCloud-tjänst och knyter datan till ditt Apple-ID.</p>
+  <p>Rättslig grund: avtal (GDPR art. 6.1.b). Lagringen krävs för att kunna leverera appens funktioner.</p>
+
+  <h3>2. Grundläggande användningsstatistik (Supabase)</h3>
+  <p>För att förstå hur Garaget används samlas en begränsad mängd data in via Supabase, en databastjänst med servrar i Stockholm.</p>
+  <p>Innehåll: ett slumpmässigt ID utan koppling till dig som person, fordonsdata (märke, modell, årsmodell, drivmedel), motorgrupp, aktiva och dolda servicepunkter, eget och rekommenderat intervall per punkt, app- och iOS-version, och tidsstämpel.</p>
+  <p>ID:t lagras i ditt iCloud-konto och används av appen när statistik skickas till Garagets analystjänst. Datan är pseudonym: den är inte direkt kopplad till dig, men ID:t kan över tid särskilja en enhet, vilket gör den till en personuppgift enligt GDPR.</p>
+  <p>Rättslig grund: berättigat intresse (GDPR art. 6.1.f). Garaget har ett berättigat intresse av att förstå hur appen används för att förbättra funktioner, stabilitet och prioritera utveckling. Du har rätt att invända mot den här behandlingen (se Dina rättigheter).</p>
+
+  <h3>3. Detaljerad användningsdata vid samtycke (Supabase)</h3>
+  <p>Om du ger samtycke i onboardingen eller via Inställningar &gt; Integritet samlas mer detaljerad användningsdata in, kopplad till ditt Apple-ID via en separat kopplingstabell som hålls åtskild från statistikdatan.</p>
+  <p>Innehåll: utöver fälten ovan även registreringsnummer, serviceloggar och fritext som du själv skriver in, egna punkters namn och intervall, onboarding-spårning, utfall av periodisk kontroll, intervallförändringar, besiktningsdata, om du använder gratisversionen eller Plus, respons på påminnelser, vilka funktioner du sett, och aktivitetsdatum.</p>
+  <p>Rättslig grund: samtycke (GDPR art. 6.1.a).</p>
+  <p>Du kan återkalla samtycket när som helst i Inställningar &gt; Integritet. Vid återkallande tas kopplingen mellan ditt Apple-ID och statistik-ID:t bort direkt och permanent. Den detaljerade datan förlorar då sin koppling till dig och övergår till pseudonym statistik enligt punkt 2.</p>
+
+  <hr>
+
+  <h2>Underbiträden och dataöverföringar</h2>
+  <p>Garaget använder följande underbiträden för att leverera tjänsten:</p>
+  <ul>
+    <li><strong>Apple Inc.</strong> (iCloud, App Store, betalningar): hanterar din app-data, inloggning via Apple-ID, och köp av Plus.</li>
+    <li><strong>Supabase, Inc.</strong> (databastjänst): lagrar användningsstatistiken. Servrar i Stockholm. Supabase använder i sin tur underleverantörer för hosting och drift, listade i deras dataskyddsavtal (supabase.com/legal/dpa).</li>
+  </ul>
+  <p>Datan lagras inom EU/EES. Eftersom Apple och Supabase är amerikanska bolag kan administrativ åtkomst utanför EU/EES förekomma. Sådana överföringar skyddas i förekommande fall genom EU-kommissionens beslut om adekvat skyddsnivå (EU-US Data Privacy Framework) och standardavtalsklausuler.</p>
+
+  <hr>
+
+  <h2>Dina rättigheter</h2>
+  <p>Du har följande rättigheter enligt GDPR:</p>
+  <ul>
+    <li><strong>Åtkomst (art. 15):</strong> få veta vilken data som finns om dig</li>
+    <li><strong>Rättelse (art. 16):</strong> få felaktig data korrigerad</li>
+    <li><strong>Radering (art. 17):</strong> få din data raderad</li>
+    <li><strong>Portabilitet (art. 20):</strong> få ut din data i ett strukturerat format</li>
+    <li><strong>Invändning (art. 21):</strong> invända mot behandling som sker med berättigat intresse som rättslig grund (punkt 2 ovan).</li>
+    <li><strong>Återkallande av samtycke (art. 7.3):</strong> dra tillbaka samtycke när som helst i appens inställningar</li>
+    <li><strong>Klagomål till IMY (art. 77):</strong> lämna klagomål till tillsynsmyndigheten</li>
+  </ul>
+  <p>Den mesta av din app-data finns redan i ditt eget iCloud-konto och är tillgänglig via Apples verktyg (Inställningar &gt; Apple-ID &gt; iCloud &gt; Hantera lagring).</p>
+  <p>För data i Supabase, eller om du vill ha en samlad kopia, använd "Hantera dina uppgifter" i Inställningar &gt; Integritet i appen. Det öppnar ett pre-ifyllt mejl med ditt Garaget-ID. Du kan också skriva direkt till <a href="mailto:hej@studiomalva.se">hej@studiomalva.se</a>. Förfrågan besvaras inom 30 dagar (GDPR art. 12.3).</p>
+
+  <hr>
+
+  <h2>Lagringstider</h2>
+  <ul>
+    <li><strong>App-data i iCloud:</strong> så länge ditt konto är aktivt. Vid kontoradering markerar Garaget din data för radering. Efter 30 dagars frist initieras permanent radering. Data i iCloud hanteras därefter enligt Apples system och synkroniseringsrutiner.</li>
+    <li><strong>Grundläggande användningsstatistik:</strong> behålls i pseudonym form så länge datan behövs för att analysera användning, utveckling och långsiktiga trender.</li>
+    <li><strong>Detaljerad användningsdata vid samtycke:</strong> under aktiv samtyckesperiod. Vid återkallande tas Apple-ID-kopplingen bort direkt och datan övergår till pseudonym statistik.</li>
+    <li><strong>Vid kontoradering:</strong> all tillhörande data i Supabase raderas permanent efter 30 dagars frist. Data i CloudKit raderas enligt processen ovan.</li>
+  </ul>
+
+  <hr>
+
+  <h2>Notiser</h2>
+  <p>Garaget skickar lokala påminnelser om service, besiktning och periodisk kontroll. Notiserna skapas och schemaläggs lokalt på din enhet. Ingen information skickas till Garagets servrar för att leverera dem. Du kan styra notiserna i Garaget &gt; Inställningar &gt; Notiser, eller i iOS övergripande inställningar.</p>
+
+  <hr>
+
+  <h2>Ändringar i policyn</h2>
+  <p>Om policyn ändras meddelas du via appen vid nästa öppning. Senaste uppdateringsdatum står överst i dokumentet.</p>
+</main>
+<footer class="site">
+  © 2026 Studio Malva
+  <nav><a href="index.html">Studio Malva</a> · <a href="anvandarvillkor.html">Användarvillkor</a></nav>
+</footer>
+</body>
+</html>
